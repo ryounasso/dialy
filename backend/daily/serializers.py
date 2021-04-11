@@ -9,9 +9,7 @@ class DailySerializer(serializers.ModelSerializer):
             'date',
             'study',
             'other',
-            'first_meet',
             'wanna_do',
-            'summary',
             'evaluation',
         )
         model = Daily
