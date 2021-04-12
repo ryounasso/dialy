@@ -13,14 +13,19 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from socket import gethostname
-from os import environ
+import environ
 
-# herokuの環境かどうか
-HEROKU_ENV = environ('DJANGO_HEROKU_ENV')
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
 
-# herokuの環境でない時は.envファイルを読む
-if not HEROKU_ENV:
-    environ.read_env('.env')
+# # herokuの環境かどうか
+# HEROKU_ENV = env('DJANGO_HEROKU_ENV')
+
+# # herokuの環境でない時は.envファイルを読む
+# if not HEROKU_ENV:
+#     environ.read_env('.env')
 
 HOSTNAME = gethostname()
 
@@ -28,7 +33,7 @@ if 'local' in HOSTNAME:
     from .local_settings import SECRET_KEY
     SECRET_KEY = SECRET_KEY
 else:
-    SECRET_KEY = environ['SECRET_KEY']
+    SECRET_KEY = env['SECRET_KEY']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,7 +46,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG=environ.bool('DEBUG', False)
+DEBUG=environ('DEBUG')
 
 ALLOWED_HOSTS = ['daily-rep.herokuapp.com']
 
