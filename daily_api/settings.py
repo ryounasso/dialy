@@ -16,7 +16,7 @@ from socket import gethostname
 from os import environ
 
 # herokuの環境かどうか
-HEROKU_ENV = environ.bool('DJANGO_HEROKU_ENV', default=False)
+HEROKU_ENV = environ('DJANGO_HEROKU_ENV')
 
 # herokuの環境でない時は.envファイルを読む
 if not HEROKU_ENV:
