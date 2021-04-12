@@ -15,14 +15,12 @@ import os
 from socket import gethostname
 from os import environ
 
-env = environ.Env()
-
 # herokuの環境かどうか
-HEROKU_ENV = env.bool('DJANGO_HEROKU_ENV', default=False)
+HEROKU_ENV = environ.bool('DJANGO_HEROKU_ENV', default=False)
 
 # herokuの環境でない時は.envファイルを読む
 if not HEROKU_ENV:
-    env.read_env('.env')
+    environ.read_env('.env')
 
 HOSTNAME = gethostname()
 
@@ -43,7 +41,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG=env.bool('DEBUG', False)
+DEBUG=environ.bool('DEBUG', False)
 
 ALLOWED_HOSTS = ['daily-rep.herokuapp.com']
 
