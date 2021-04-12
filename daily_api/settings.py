@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from socket import gethostname
-from os import environ
+import environ
 
 env = environ.Env()
 
