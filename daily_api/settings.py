@@ -33,7 +33,7 @@ if 'local' in HOSTNAME:
     from .local_settings import SECRET_KEY
     SECRET_KEY = SECRET_KEY
 else:
-    SECRET_KEY = env['SECRET_KEY']
+    SECRET_KEY = env('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
