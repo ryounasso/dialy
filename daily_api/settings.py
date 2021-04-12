@@ -30,7 +30,7 @@ env = environ.Env(
 HOSTNAME = gethostname()
 
 if 'local' in HOSTNAME:
-    from .local_settings import SECRET_KEY
+    from local_settings import SECRET_KEY
     SECRET_KEY = SECRET_KEY
 else:
     SECRET_KEY = env('SECRET_KEY')
