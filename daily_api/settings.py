@@ -50,7 +50,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['daily-rep.herokuapp.com/', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['daily-rep.herokuapp.com/', '127.0.0.1', 'localhost', 'daily-rep.herokuapp.com']
 
 
 # Application definition
