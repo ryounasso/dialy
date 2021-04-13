@@ -32,8 +32,10 @@ HOSTNAME = gethostname()
 if 'local' in HOSTNAME:
     from local_settings import SECRET_KEY
     SECRET_KEY = SECRET_KEY
+    DEBUG = True
 else:
     SECRET_KEY = env('SECRET_KEY')
+    DEBUG=env('DEBUG')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,9 +48,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG=env('DEBUG')
 
-ALLOWED_HOSTS = ['daily-rep.herokuapp.com/', '127.0.0.1']
+
+ALLOWED_HOSTS = ['daily-rep.herokuapp.com/', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -72,7 +74,8 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_ALLOW_ALL = True;
+# CORS_ORIGIN_ALLOW_ALL = True;
+CORS_ALLOW_ALL_ORIGINS = True;
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
