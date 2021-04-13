@@ -18,7 +18,7 @@ export const CustomForm = (props) => {
     }
 
     axios
-      .post("http://localhost:8000/daily/", {
+      .post("https://daily-rep.herokuapp.com/daily/", {
         date: date,
         study: study,
         other: others,

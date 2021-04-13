@@ -33,7 +33,7 @@ export const DailyDetail = (props) => {
   }, []);
 
   const handleDelete = () => {
-    axios.delete(`http://localhost:8000/daily/${id}`);
+    axios.delete(`https://daily-rep.herokuapp.com/daily/${id}`);
     history.push("/");
     this.forceUpdate();
   };
