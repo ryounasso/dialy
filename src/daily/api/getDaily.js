@@ -17,7 +17,11 @@ export const getDaily = async () => {
 
 //1日の詳細を取得
 export const getDailyDetail = async (id) => {
-  const res = await fetch(`https://daily-rep.herokuapp.com/daily/${id}`, {
+  const res = await fetch(`https://daily-rep.herokuapp.com/daily/${id}/`, {
+    headers: {
+      Accept: "application/json, */*",
+      "Content-type": "application/json",
+    },
     method: "GET",
   });
   return await toJson(res);
@@ -25,7 +29,7 @@ export const getDailyDetail = async (id) => {
 
 //カテゴリ別一覧を取得
 export const getCategory = async (cat) => {
-  const res = await fetch(`https://daily-rep.herokuapp.com/daily/${cat}`, {
+  const res = await fetch(`https://daily-rep.herokuapp.com/daily/${cat}/`, {
     method: "GET",
   });
   return await toJson(res);
