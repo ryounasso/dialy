@@ -72,7 +72,6 @@ export const DailyDetail = (props) => {
         {/* <CategoryList /> */}
         <form onSubmit={handleDelete}>
           <button
-            type="danger"
             type="submit"
             class="p-4 bg-red-500 rounded-lg mt-8 ml-8 text-white"
           >
