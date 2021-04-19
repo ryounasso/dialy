@@ -10,10 +10,10 @@ import "./tailwind.css";
 
 const App = () => {
   return (
-    <div class="container mx-auto bg-gray-50">
+    <div>
       <Router>
         <Header />
-        <div>
+        <div class="container mx-auto">
           <Switch>
             <Route exact path="/" component={Top} />
             <Route exact path="/daily" component={DailyTop} />

@@ -79,7 +79,7 @@ export const DailyDetail = (props) => {
           </button>
         </form>
       </div>
-      <div class="mt-4 p-8 bg-gray-50">
+      <div class="mt-4 p-8">
         <Link class="p-4 bg-blue-300 rounded-lg text-white" to="/daily">
           日報一覧に戻る
         </Link>
