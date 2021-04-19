@@ -92,7 +92,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000','https://daily-repo.herokuapp.com', 'https://daily-repo.herokuapp.com/'
+    'http://localhost:3000','https://daily-repo.herokuapp.com',
 )
 
 ROOT_URLCONF = 'daily_api.urls'
