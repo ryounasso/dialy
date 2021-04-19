@@ -2,7 +2,9 @@ from .models import Daily
 from .serializers import DailySerializer
 
 from rest_framework import viewsets
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 class DailyViewSet(viewsets.ModelViewSet):
     serializer_class = DailySerializer
     queryset = Daily.objects.all()
