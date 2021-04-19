@@ -20,10 +20,10 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-# # herokuの環境かどうか
+# herokuの環境かどうか
 # HEROKU_ENV = env('DJANGO_HEROKU_ENV')
 
-# # herokuの環境でない時は.envファイルを読む
+# herokuの環境でない時は.envファイルを読む
 # if not HEROKU_ENV:
 #     environ.read_env('.env')
 
@@ -83,7 +83,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
