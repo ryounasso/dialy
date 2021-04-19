@@ -16,6 +16,7 @@ export const CustomForm = (props) => {
     } else {
       evaluation = 2;
     }
+    // const evaluation = event.target.elements.evaluation.value;
 
     axios
       .post("https://daily-repo.herokuapp.com/daily/", {
