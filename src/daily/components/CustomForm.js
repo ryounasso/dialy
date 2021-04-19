@@ -5,6 +5,9 @@ import axios from "axios";
 export const CustomForm = (props) => {
   const { requestType, dailyId, btnText } = props;
 
+  axios.defaults.xsrfCookieName = "csrftoken";
+  axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+
   const handleFormsubmit = (event, requestType, dailyId) => {
     const date = event.target.elements.date.value;
     const study = event.target.elements.study.value;
@@ -18,6 +21,8 @@ export const CustomForm = (props) => {
     }
     // const evaluation = event.target.elements.evaluation.value;
 
+    axios.defaults.xsrfCookieName = "csrftoken"; // ←ココと
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"; // ←ココに追加しました
     axios
       .post("https://daily-repo.herokuapp.com/daily/", {
         date: date,
