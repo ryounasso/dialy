@@ -91,9 +91,9 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:3000',
-# )
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000','daily-repo.herokuapp.com', 'daily-repo.herokuapp.com/'
+)
 
 ROOT_URLCONF = 'daily_api.urls'
 
