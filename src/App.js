@@ -10,7 +10,7 @@ import "./tailwind.css";
 
 const App = () => {
   return (
-    <div>
+    <div class=" bg-bgimg">
       <Router>
         <Header />
         <div class="container mx-auto">

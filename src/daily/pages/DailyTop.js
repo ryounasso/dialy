@@ -37,9 +37,11 @@ export const DailyTop = () => {
           ))}
         </div>
       )}
-      <p class="mt-12 text-2xl">日報作成</p>
-      <br />
-      <CustomForm requestType="post" dailyId={null} btnText="Create" />
+      <div>
+        <p class="mt-12 text-2xl">日報作成</p>
+        <br />
+        <CustomForm requestType="post" dailyId={null} btnText="Create" />
+      </div>
     </div>
   );
 };
