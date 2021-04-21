@@ -5,12 +5,11 @@ import { Top } from "./Top";
 import { DailyTop } from "./daily/pages/DailyTop";
 import { CategoryView } from "./daily/pages/CategoryView";
 import { DailyDetail } from "./daily/pages/DailyDetail";
-// import { Profile} from './profile/Profile';
 import "./tailwind.css";
 
 const App = () => {
   return (
-    <div class=" bg-bgimg">
+    <div>
       <Router>
         <Header />
         <div class="container mx-auto">
