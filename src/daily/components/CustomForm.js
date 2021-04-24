@@ -21,8 +21,8 @@ export const CustomForm = (props) => {
     }
     // const evaluation = event.target.elements.evaluation.value;
 
-    axios.defaults.xsrfCookieName = "csrftoken"; // ←ココと
-    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"; // ←ココに追加しました
+    axios.defaults.xsrfCookieName = "csrftoken";
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
     axios
       .post("https://daily-repo.herokuapp.com/daily/", {
         date: date,
@@ -132,11 +132,11 @@ export const CustomForm = (props) => {
         </div>
       </div>
       <button
-        class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4"
+        class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded m-4"
         type="submit"
         form="createDaily"
       >
-        {btnText}
+        作成
       </button>
       {/* </div> */}
     </form>

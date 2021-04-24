@@ -3,6 +3,7 @@ import { getDaily } from "../api/getDaily";
 import { DailyContent } from "../components/DailyContent";
 import { CategoryList } from "../components/CategoryList";
 import { CustomForm } from "../components/CustomForm";
+import Modal from "../components/Modal";
 import "../../tailwind.css";
 
 export const DailyTop = () => {
@@ -38,9 +39,9 @@ export const DailyTop = () => {
         </div>
       )}
       <div>
-        <p class="mt-12 text-2xl">日報作成</p>
+        {/* <p class="mt-12 text-2xl">日報作成</p> */}
         <br />
-        <CustomForm requestType="post" dailyId={null} btnText="Create" />
+        <Modal />
       </div>
     </div>
   );
