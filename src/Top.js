@@ -8,8 +8,8 @@ export const Top = () => {
   return (
     <>
       <div class="grid grid-cols-5">
-        <div class="col-span-4 items-center">
-          <Link class="p-4 bg-blue-300 rounded-lg" to="/daily">
+        <div class="col-span-3 text-center flex items-center justify-center">
+          <Link class="p-4 bg-blue-300 rounded-lg  " to="/daily">
             日報を見る
           </Link>
         </div>
